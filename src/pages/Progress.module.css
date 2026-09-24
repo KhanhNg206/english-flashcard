@@ -1,0 +1,46 @@
+/* =============================================
+   Progress Page Styles
+   ============================================= */
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.progress-item {
+  background: var(--white);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.item-stats {
+  display: flex;
+  gap: 24px;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+
+.stat-val {
+  font-weight: 700;
+}
+.stat-val.known { color: var(--success); }
+.stat-val.unknown { color: var(--danger); }
+.stat-val.new { color: var(--gray-500); }

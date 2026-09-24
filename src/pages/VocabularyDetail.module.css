@@ -1,0 +1,105 @@
+/* =============================================
+   Vocabulary Detail Styles
+   ============================================= */
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-input {
+  flex: 1;
+}
+
+/* Quick Add Form */
+.quick-add-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr auto;
+  gap: 12px;
+  margin-bottom: 24px;
+  background: var(--white);
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  align-items: end;
+}
+
+/* Word List Table */
+.word-list {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.word-row {
+  display: grid;
+  grid-template-columns: 50px 2fr 2fr 100px 100px;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.word-row.header {
+  background: var(--gray-50);
+  font-weight: 700;
+  color: var(--gray-700);
+}
+
+.word-row:last-child {
+  border-bottom: none;
+}
+
+.word-text {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* Trạng thái */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+.status-new { background: var(--gray-100); color: var(--gray-600); }
+.status-known { background: var(--success-light); color: #065f46; }
+.status-unknown { background: var(--danger-light); color: #991b1b; }
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .word-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px;
+  }
+  
+  .word-row.header {
+    display: none;
+  }
+  
+  .row-actions {
+    margin-top: 8px;
+  }
+}

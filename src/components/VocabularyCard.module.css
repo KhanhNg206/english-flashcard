@@ -1,0 +1,124 @@
+/* =============================================
+   VocabularyCard Component Styles
+   ============================================= */
+
+.vocab-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition);
+}
+
+.vocab-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Header: tên bộ từ + nút menu */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.card-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  word-break: break-word;
+}
+
+.card-date {
+  font-size: 0.78rem;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+
+/* Thống kê */
+.card-stats {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--gray-600);
+}
+
+/* Actions */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* Menu dropdown */
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  color: var(--gray-400);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.menu-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  min-width: 160px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: var(--gray-700);
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.dropdown-item:hover {
+  background: var(--gray-50);
+}
+
+.dropdown-item.danger {
+  color: var(--danger);
+}
+
+.dropdown-item.danger:hover {
+  background: var(--danger-light);
+}

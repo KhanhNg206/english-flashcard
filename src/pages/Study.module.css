@@ -1,0 +1,31 @@
+/* =============================================
+   Study Page Styles
+   ============================================= */
+
+.study-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.study-header {
+  width: 100%;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.study-header h1 {
+  font-size: 1.8rem;
+  color: var(--gray-800);
+  margin-bottom: 16px;
+}
+
+/* Actions top */
+.study-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}

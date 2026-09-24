@@ -1,0 +1,132 @@
+/* =============================================
+   Theory Page Styles
+   ============================================= */
+
+.theory-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.theory-header h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+/* Thanh công cụ */
+.theory-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.theory-search {
+  flex: 1;
+  min-width: 250px;
+}
+
+.theory-filters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  background: var(--gray-50);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* Card danh sách */
+.theory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.theory-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.theory-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.theory-card h3 {
+  font-size: 1.2rem;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+}
+
+.theory-card .eng-title {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+  font-weight: 600;
+}
+
+.theory-card p {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.badge-level {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.badge-level.basic { background: #d1fae5; color: #065f46; }
+.badge-level.medium { background: #fef3c7; color: #92400e; }
+.badge-level.advanced { background: #fee2e2; color: #991b1b; }
+
+.status-icon {
+  font-size: 1.5rem;
+}

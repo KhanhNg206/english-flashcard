@@ -1,0 +1,192 @@
+/* =============================================
+   Theory Detail Page Styles
+   ============================================= */
+
+.layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Sidebar TOC */
+.toc-sidebar {
+  width: 260px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 24px;
+  flex-shrink: 0;
+}
+
+.toc-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toc-item {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.toc-item:hover {
+  background: var(--gray-50);
+  color: var(--primary);
+}
+
+.toc-item.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Nội dung chính */
+.content-area {
+  flex: 1;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.topic-header {
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--gray-100);
+  padding-bottom: 24px;
+}
+
+.topic-title {
+  font-size: 2.5rem;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.topic-eng {
+  font-size: 1.2rem;
+  color: var(--gray-500);
+  font-weight: 600;
+}
+
+/* Từng phần (Section) */
+.section-block {
+  margin-bottom: 40px;
+  scroll-margin-top: 80px; /* Offset cho scroll */
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--gray-800);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 24px;
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.explanation-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--gray-700);
+  white-space: pre-line;
+  margin-bottom: 16px;
+}
+
+/* Footer / Actions */
+.theory-footer {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.mark-learned-btn {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.mark-learned-btn.learned {
+  background: var(--success-light);
+  color: #065f46;
+  border: 2px solid var(--success);
+}
+
+.mark-learned-btn.unlearned {
+  background: var(--gray-100);
+  color: var(--gray-600);
+}
+
+.mark-learned-btn.unlearned:hover {
+  background: var(--success);
+  color: var(--white);
+}
+
+.next-actions {
+  display: flex;
+  gap: 16px;
+  background: var(--primary-light);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.next-actions p {
+  color: var(--primary-dark);
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+  .toc-sidebar {
+    width: 100%;
+    position: static;
+    margin-bottom: 24px;
+  }
+  .content-area {
+    padding: 24px;
+  }
+}

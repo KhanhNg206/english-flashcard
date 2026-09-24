@@ -1,0 +1,52 @@
+/* =============================================
+   Quiz Page Styles
+   ============================================= */
+
+.quiz-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+/* Result screen */
+.result-screen {
+  text-align: center;
+  background: var(--white);
+  padding: 48px 24px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.result-icon {
+  font-size: 5rem;
+  margin-bottom: 16px;
+}
+
+.result-screen h2 {
+  font-size: 2rem;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.result-score {
+  font-size: 1.25rem;
+  color: var(--gray-600);
+  margin-bottom: 32px;
+}
+
+.result-score strong {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.result-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}

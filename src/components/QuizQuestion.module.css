@@ -1,0 +1,96 @@
+/* =============================================
+   QuizQuestion Component Styles
+   ============================================= */
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.question-counter {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  font-weight: 600;
+}
+
+.question-score {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.question-title {
+  font-size: 1.4rem;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.question-word {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+  margin-top: 8px;
+}
+
+/* Các tùy chọn đáp án */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.option-btn {
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 2px solid var(--gray-200);
+  background: var(--white);
+  font-size: 1.05rem;
+  color: var(--gray-800);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: var(--gray-50);
+}
+
+/* Trạng thái đáp án */
+.option-btn.correct {
+  border-color: var(--success);
+  background: var(--success-light);
+  color: #065f46;
+}
+
+.option-btn.wrong {
+  border-color: var(--danger);
+  background: var(--danger-light);
+  color: #991b1b;
+}
+
+/* Nút Tiếp tục */
+.next-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
