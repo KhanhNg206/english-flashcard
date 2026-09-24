@@ -47,13 +47,6 @@ export default function VocabularyDetail() {
 
   const knownCount = vocabSet.words.filter((w) => w.status === 'known').length;
 
-  const handleOpenAdd = () => {
-    setEditWord(null);
-    setFormWord('');
-    setFormMeaning('');
-    setShowModal(true);
-  };
-
   const handleOpenEdit = (w: Word) => {
     setEditWord(w);
     setFormWord(w.word);

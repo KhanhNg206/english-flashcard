@@ -55,7 +55,7 @@ export default function Study() {
     setCurrentIndex(nextIdx);
   };
 
-  const handleUpdateStatus = (wordId: number, status: 'known' | 'unknown') => {
+  const handleUpdateStatus = (wordId: number, status: import('../types').WordStatus) => {
     updateWordStatus(vocabSet.id, wordId, status);
   };
 

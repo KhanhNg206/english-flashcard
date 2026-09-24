@@ -24,8 +24,6 @@ export default function Home() {
     knownWords += set.words.filter((w) => w.status === 'known').length;
   });
 
-  const progress = totalWords > 0 ? Math.round((knownWords / totalWords) * 100) : 0;
-
   // Lấy 3 bộ từ mới nhất
   const recentSets = [...sets]
     .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
