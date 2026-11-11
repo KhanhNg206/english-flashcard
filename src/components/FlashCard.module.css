@@ -79,12 +79,36 @@
   line-height: 1.2;
 }
 
+.card-type-tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
 .card-meaning {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   color: var(--primary);
   line-height: 1.2;
+}
+
+.card-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  background: var(--gray-50);
+  border-left: 3px solid var(--primary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  max-width: 90%;
+  text-align: center;
 }
 
 .card-hint {

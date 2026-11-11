@@ -7,8 +7,11 @@ import type { Word } from '../types';
 
 /**
  * Parse nội dung file TXT thành mảng Word
- * Format mỗi dòng: "từ tiếng Anh|nghĩa tiếng Việt"
- * Ví dụ: "apple|quả táo"
+ * Hỗ trợ các format:
+ * 1. "word|meaning"
+ * 2. "word|meaning|wordType"
+ * 3. "word|meaning|wordType|note"
+ * Ví dụ: "apple|quả táo|noun|Trái cây ăn ngon"
  */
 export function parseVocabularyFile(text: string): Word[] {
   const words: Word[] = [];
@@ -24,10 +27,11 @@ export function parseVocabularyFile(text: string): Word[] {
     // Kiểm tra có dấu | không
     if (!trimmedLine.includes('|')) continue;
 
-    // Tách theo dấu | đầu tiên (phòng trường hợp nghĩa có chứa |)
-    const pipeIndex = trimmedLine.indexOf('|');
-    const word    = trimmedLine.slice(0, pipeIndex).trim();
-    const meaning = trimmedLine.slice(pipeIndex + 1).trim();
+    const parts = trimmedLine.split('|').map(p => p.trim());
+    const word = parts[0] || '';
+    const meaning = parts[1] || '';
+    const wordType = parts[2] || undefined;
+    const note = parts[3] || undefined;
 
     // Bỏ qua nếu từ hoặc nghĩa bị rỗng
     if (!word || !meaning) continue;
@@ -37,6 +41,8 @@ export function parseVocabularyFile(text: string): Word[] {
       word,
       meaning,
       status: 'new', // Mặc định khi mới import
+      wordType: wordType || undefined,
+      note: note || undefined,
     });
   }
 
@@ -70,8 +76,16 @@ export function exportToTXT(setName: string, words: Word[]): void {
     return;
   }
   
-  // Nối các từ lại thành chuỗi, định dạng word|meaning
-  const textContent = words.map(w => `${w.word}|${w.meaning}`).join('\n');
+  // Nối các từ lại thành chuỗi, định dạng word|meaning|wordType|note (nếu có)
+  const textContent = words.map(w => {
+    if (w.note) {
+      return `${w.word}|${w.meaning}|${w.wordType || ''}|${w.note}`;
+    }
+    if (w.wordType) {
+      return `${w.word}|${w.meaning}|${w.wordType}`;
+    }
+    return `${w.word}|${w.meaning}`;
+  }).join('\n');
   
   // Tạo blob chứa dữ liệu
   const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });

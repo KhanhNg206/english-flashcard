@@ -64,6 +64,9 @@ export default function FlashCard({
           <div className={styles['card-front']}>
             <div className={styles['card-label']}>English</div>
             <div className={styles['card-word']}>{word.word}</div>
+            {word.wordType && (
+              <span className={styles['card-type-tag']}>{word.wordType}</span>
+            )}
             
             <button
               className={styles['speak-btn']}
@@ -79,6 +82,12 @@ export default function FlashCard({
           <div className={styles['card-back']}>
             <div className={styles['card-label']}>Vietnamese</div>
             <div className={styles['card-meaning']}>{word.meaning}</div>
+            
+            {word.note && (
+              <div className={styles['card-note']}>
+                💡 <strong>Ghi chú:</strong> {word.note}
+              </div>
+            )}
             
             <button
               className={`${styles['speak-btn']} ${styles.back}`}

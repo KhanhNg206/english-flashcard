@@ -13,11 +13,11 @@ const DEFAULT_SET: VocabularySet = {
   name: '📚 Bộ từ vựng mẫu (Cơ bản)',
   createdAt: new Date().toISOString(),
   words: [
-    { id: 1, word: 'apple', meaning: 'quả táo', status: 'new' },
-    { id: 2, word: 'beautiful', meaning: 'xinh đẹp', status: 'new' },
-    { id: 3, word: 'environment', meaning: 'môi trường', status: 'new' },
-    { id: 4, word: 'development', meaning: 'sự phát triển', status: 'new' },
-    { id: 5, word: 'important', meaning: 'quan trọng', status: 'new' },
+    { id: 1, word: 'apple', meaning: 'quả táo', status: 'new', wordType: 'Noun (Danh từ)', note: 'Một loại trái cây phổ biến' },
+    { id: 2, word: 'beautiful', meaning: 'xinh đẹp', status: 'new', wordType: 'Adjective (Tính từ)', note: 'Từ đồng nghĩa: pretty, gorgeous' },
+    { id: 3, word: 'environment', meaning: 'môi trường', status: 'new', wordType: 'Noun (Danh từ)', note: 'Thường gặp trong TOEIC Part 7' },
+    { id: 4, word: 'development', meaning: 'sự phát triển', status: 'new', wordType: 'Noun (Danh từ)', note: 'Động từ tương ứng: develop' },
+    { id: 5, word: 'important', meaning: 'quan trọng', status: 'new', wordType: 'Adjective (Tính từ)', note: 'Cấu trúc: It is important that...' },
   ],
 };
 

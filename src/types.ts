@@ -5,12 +5,17 @@
 // Trạng thái học của mỗi từ
 export type WordStatus = 'new' | 'known' | 'unknown';
 
+// Loại từ tiếng Anh
+export type WordType = 'noun' | 'verb' | 'adjective' | 'adverb' | 'preposition' | 'conjunction' | 'pronoun' | 'interjection' | 'phrase' | 'other';
+
 // Một từ vựng
 export interface Word {
   id: number;
-  word: string;       // Từ tiếng Anh
-  meaning: string;    // Nghĩa tiếng Việt
-  status: WordStatus; // Trạng thái học
+  word: string;         // Từ tiếng Anh
+  meaning: string;      // Nghĩa tiếng Việt
+  status: WordStatus;   // Trạng thái học
+  wordType?: string;    // Loại từ (n, v, adj, adv,...)
+  note?: string;        // Ghi chú, ví dụ, lưu ý
 }
 
 // Một bộ từ vựng
